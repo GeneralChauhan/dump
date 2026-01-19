@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 48 100% 50%; /* Bumble Yellow */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 270 95% 64%;  /* Purple */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 326 73% 57%; /* Pink */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 48 100% 50%;
+
+    --radius: 1.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 48 100% 50%; /* Bumble Yellow */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 270 95% 64%; /* Purple */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 326 73% 57%; /* Pink */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 48 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-md bg-white/70 border border-white/20 shadow-md;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-md bg-black/30 border border-white/10 shadow-md;
+  }
+  
+  .bumble-gradient {
+    @apply bg-gradient-yellow;
+  }
+  
+  .purple-gradient {
+    @apply bg-gradient-purple;
+  }
+  
+  .pink-gradient {
+    @apply bg-gradient-pink;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom animations */
+.card-enter {
+  animation: cardEnter 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes cardEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.page-transition-enter {
+  animation: pageEnter 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced animations for scroll effects */
+.animate-on-scroll {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate-fade-in,
+.animate-fade-in {
+  animation: fadeInScale 0.8s ease forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Button focus styles for keyboard navigation */
+button:focus-visible, 
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-2 ring-bloom-yellow ring-offset-2 ring-offset-white;
+}
+
+.dark button:focus-visible,
+.dark a:focus-visible,
+.dark input:focus-visible,
+.dark textarea:focus-visible {
+  @apply ring-offset-black;
+}
+
+/* 3D card hover effect */
+.hover-card-3d {
+  transition: transform 0.3s ease;
+}
+
+.hover-card-3d:hover {
+  transform: translateY(-10px) rotateX(5deg);
+}
+
+/* Shimmer effect for loading states */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

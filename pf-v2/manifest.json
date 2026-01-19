@@ -1,0 +1,17 @@
+{
+    "name": "Abhinab Pratap Singh Chauhan",
+    "short_name": "God",
+    "theme_color": "#F5F5E7",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://abhinab.tech/",
+    "description": "Portfolio of Abhinab Pratap Singh Chauhan",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://abhinab.tech/assets/favicon.png",
+            "sizes": "1024x1024"
+        }
+    ]
+}

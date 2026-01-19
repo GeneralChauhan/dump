@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 13% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 13% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 13% 20%;
+
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 263 70% 45%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 13% 20%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 263 70% 96%;
+    --accent-foreground: 263 70% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 263 70% 50%;
+
+    --radius: 0.75rem;
+
+    --editor-bg: 0 0% 100%;
+    --editor-border: 220 13% 91%;
+    --editor-focus: 263 70% 50%;
+
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 220 14% 96%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 263 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 263 70% 60%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 263 70% 20%;
+    --accent-foreground: 263 70% 80%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 220 14% 96%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 263 70% 55%;
+
+    --editor-bg: 222 47% 13%;
+    --editor-border: 217 33% 17%;
+    --editor-focus: 263 70% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Code Editor styles */
+.code-editor {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  tab-size: 2;
+}
+
+.code-editor::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-editor::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.code-editor::-webkit-scrollbar-thumb {
+  background: #3c3c3c;
+  border-radius: 4px;
+}
+
+.code-editor::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* VS Code-like syntax highlighting */
+.code-editor .keyword {
+  color: #569cd6;
+}
+
+.code-editor .string {
+  color: #ce9178;
+}
+
+.code-editor .comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.code-editor .number {
+  color: #b5cea8;
+}
+
+.code-editor .function {
+  color: #dcdcaa;
+}
+
+.code-editor .variable {
+  color: #9cdcfe;
+}

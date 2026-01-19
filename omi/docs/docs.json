@@ -1,0 +1,113 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Docs",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#55D799",
+    "dark": "#0D9373"
+  },
+  "favicon": "/favicon.ico",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "doc/get_started/introduction",
+          "doc/get_started/Flash_device",
+           "getstartedwithomi"
+        ]
+      },
+      {
+        "group": "Developer",
+        "pages": [
+          {
+            "group": "Apps",
+            "pages": [
+              "doc/developer/apps/Introduction",
+              "doc/developer/apps/PromptBased",
+              "doc/developer/apps/Integrations",
+              "doc/developer/apps/AudioStreaming",
+              "doc/developer/apps/Import",
+              "doc/developer/apps/Submitting",
+              "doc/developer/apps/Oauth",
+              "doc/developer/apps/Notifications"
+            ]
+          },
+          "doc/developer/AppSetup",
+          {
+            "group": "Backend",
+            "pages": [
+              "doc/developer/backend/Backend_Setup",
+              "doc/developer/backend/backend_deepdive",
+              "doc/developer/backend/StoringMemory",
+              "doc/developer/backend/transcription",
+              "doc/developer/backend/memory_embeddings",
+              "doc/developer/backend/postprocessing"
+            ]
+          },
+          {
+            "group": "Firmware",
+            "pages": [
+              "doc/developer/firmware/Compile_firmware"
+            ]
+          },
+          {
+            "group": "SDK",
+            "pages": [
+              "doc/developer/sdk/sdk",
+              "doc/developer/sdk/python",
+              "doc/developer/sdk/ReactNative",
+              "doc/developer/sdk/swift"
+            ]
+          },
+          "doc/developer/Protocol",
+          "doc/developer/Contribution",
+          "doc/developer/MCP",
+          {
+            "group": "Audio & Testing",
+            "pages": [
+              "doc/developer/savingaudio",
+              "doc/developer/AudioStreaming",
+              "doc/developer/DevKit2Testing"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Hardware",
+        "pages": [
+          "doc/hardware/DevKit1",
+          "doc/hardware/DevKit2",
+          "doc/hardware/omiGlass"
+        ]
+      },
+      {
+        "group": "DIY Guide",
+        "pages": [
+          "doc/assembly/introduction",
+          "doc/assembly/Buying_Guide",
+          "doc/assembly/Build_the_device"
+        ]
+      },
+      {
+        "group": "Info",
+        "pages": [
+          "doc/info/Support",
+          "doc/info/License",
+          "doc/info/Disclaimer",
+          "doc/info/Privacy"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/BasedHardware/omi",
+      "discord": "https://discord.com/invite/omi",
+      "x": "https://x.com/omedotme",
+      "linkedin": "https://www.linkedin.com/company/omi-ai/",
+      "instagram": "https://www.instagram.com/based_hardware/"
+    }
+  }
+}
